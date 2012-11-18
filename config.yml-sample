@@ -1,0 +1,10 @@
+server_pop: 'pop.example.com'
+server_smtp: 'smtp.example.com'
+dum_mail: empty@example.com
+dum_pass: emptypass
+
+real_name: Example user
+email_adress: 'user@example.com'
+password: 'userpass'
+user: 'user'
+domain: 'example.com'
