@@ -14,7 +14,7 @@ module Mail
         @realname = realname
 
         @user, @domain = @email.split('@')
-        @pop3_hostname = 'pop.' + @domain
+        @pop3_hostname = 'pop3.' + @domain
         @smtp_hostname = 'smtp.' + @domain
 
         @pop3_server = Net::POP3.new(@pop3_hostname)
@@ -86,7 +86,7 @@ module Mail
         msgstr += "From: #{@realname} <#{@email}>\n"
         msgstr += "To: #{@realname} <#{@email}>\n"
         msgstr += "Subject: test message\n"
-        msgstr += "Date: Sat, 23 Jun 2001 16:26:43 +0900\n"
+        msgstr += "Date: Sat, 23 Jun 2020 16:26:43 +0900\n"
         msgstr += "#{message_id}\n"
         msgstr += "\n"
         msgstr += "This is a test message."
