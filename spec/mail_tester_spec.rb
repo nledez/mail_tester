@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 require 'mail_tester'
 
-describe MailTester do
+describe Mail::Tester::MailTester do
   before(:all) do
     config_file = "config.yml"
 
@@ -15,7 +15,7 @@ describe MailTester do
   end
 
   before(:each) do
-    @test = MailTester.new(@config['email_adress'], @config['password'])
+    @test = Mail::Tester::MailTester.new(@config['email_adress'], @config['password'])
   end
 
   it "Can define parameters" do
@@ -67,7 +67,7 @@ describe MailTester do
   end
 
   it "Can use a empty account" do
-    @test = MailTester.new(@config['dum_mail'], @config['dum_pass'])
+    @test = Mail::Tester::MailTester.new(@config['dum_mail'], @config['dum_pass'])
     (message, nb) = @test.check_mail
 
     message.should =~ /^No mail.$/
